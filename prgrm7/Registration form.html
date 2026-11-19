@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration form</title>
+</head>
+<body>
+<h1><b>Registration Form</b></h1>
+<form>
+<label>Name:</label>
+<input type="text" name="name" id="name">
+<br><br>
+<label>Age</label>
+<input type="number" name="number" id="number">
+<br><br>
+<label>Email:</label>
+<input type="email" name="Email" id="Email">
+<br><br>
+<label>DOB</label>
+<input type="date" name="DOB" id="date">
+<br><br>
+<label>Phone:</label>
+<input type="number" name="phone" id="phone">
+<br><br>
+<label>Gender</label>
+<input type="radio" name="Gender" value="Male" id="Gender">    
+<input type="radio" name="Gender" value="Female" id="Gender">                                                                                                                                                                                                                                                                  
+<br><br>
+<label>Password:</label>
+<input type="password" name="Password" id="Password">
+<br><br>
+<label>Country:</label>
+<select name="country" id="country>
+<option value="India">India</option>
+<option value="UK">UK</option>
+<option value="Australia">Australia</option>
+<option value="UAE">UAE</option>
+</select>
+<br><br>
+<label>Hobbies:</label>
+<input type="checkbox" name="hobby" value="Reading">Reading
+<br><br>
+<input type="checkbox" name="hobby" value="Drawing">Drawing
+<br><br>
+<input type="checkbox" name="hobby" value="Music">Music
+<br><br>
+<input type="checkbox" name="hobby" value="Sports">Sports
+<br><br>
+
+<input type=submit value="Registration">
+<input type=reset value="clear">
+
+<br><br>
+</form>
+<script>
+function validateForm()
+{
+var name=document.getElementby("Name").value;
+var Age=document.getElementby("Age").value;
+var Email=document.getElementby("Email").value;
+var Phone=document.getElementby("Phone").value;
+var Gender=document.getElementby("Gender").value;
+var Password=document.getElementby("Password").value;
+var Country=document.getElementby("Country").value;
+var Hobbies=document.getElementby("Hobbies").value;
+var selected=false;
+var msg=" ";
+if(Name=="")
+{
+msg+="enter your name";
+}
+if(Age=="")
+{
+msg+="enter your age";
+}
+if(Email=="")
+{
+msg+="enter your email";
+}
+if(Phone=="")
+{
+msg+="enter your phone";
+}
+if(Gender=="")
+{
+msg+="enter your Gender";
+}
+if(Password=="")
+{
+msg+="enter your password";
+}
+if(Country=="")
+{
+msg+="enter your country";
+}
+for(var i=0;i<Hobbies.length;i++)
+{
+if(Hobbies[i].checked)
+{
+selected=True
+
+
+
+
+
+
+
+

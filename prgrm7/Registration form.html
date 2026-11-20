@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration form</title>
+</head>
+<body>
+<h1><b>Registration Form</b></h1>
+<form method="POST" onsubmit="return validateForm()">
+<label>Name:</label>
+<input type="text" name="name" id="name">
+<br><br>
+<label>Age</label>
+<input type="number" name="number" id="number">
+<br><br>
+<label>Email:</label>
+<input type="email" name="Email" id="Email">
+<br><br>
+<label>DOB</label>
+<input type="date" name="DOB" id="date">
+<br><br>
+<label>Phone:</label>
+<input type="number" name="phone" id="phone">
+<br><br>
+<label>Gender:</label>
+<input type="radio" name="gender" value="Male" id="gender">Male    
+<input type="radio" name="gender" value="Female" id="gender">Female                                                                                                                                                                                                                                                                  
+<br><br>
+<label>Password:</label>
+<input type="password" name="Password" id="Password">
+<br><br>
+<label>Country:</label>
+<select name="country" id="country">
+<option value="India">India</option>
+<option value="UK">UK</option>
+<option value="Australia">Australia</option>
+<option value="UAE">UAE</option>
+</select>
+<br><br>
+<label>Hobbies:</label>
+<input type="checkbox" name="hobby" value="Reading">Reading
+<br><br>
+<input type="checkbox" name="hobby" value="Drawing">Drawing
+<br><br>
+<input type="checkbox" name="hobby" value="Music">Music
+<br><br>
+<input type="checkbox" name="hobby" value="Sports">Sports
+<br><br>
+
+<input type=submit value="Registration">
+<input type=reset value="clear">
+
+<br><br>
+</form>
+<script>
+function validateForm()
+{
+var Name=document.getElementById("name").value;
+var Age=document.getElementById("number").value;
+var Email=document.getElementById("Email").value;
+var Date=document.getElementById("date").value;
+var Phone=document.getElementById("phone").value;
+var Gender=document.getElementsByName("gender");
+var Password=document.getElementById("Password").value;
+var Country=document.getElementById("country").value;
+var Hobbies=document.getElementsByName("hobby");
+var selected=false;
+var gselected=false;
+var msg=" ";
+if(Name=="")
+{
+msg+="enter your name \n";
+}
+if(Age=="")
+{
+msg+="enter your age \n";
+}
+if(Email=="")
+{
+msg+="enter your email \n";
+}
+if(Phone=="")
+{
+msg+="enter your phone \n";
+}
+for(var i=0;i<Gender.length;i++)
+{
+if(Gender[i].checked)
+{
+gselected=true;
+}
+}
+if(gselected==false)
+{
+msg+="enter your Gender \n";
+}
+
+if(Password=="")
+{
+msg+="enter your password \n";
+}
+if(Country=="")
+{
+msg+="enter your country \n";
+}
+for(var i=0;i<Hobbies.length;i++)
+{
+	if(Hobbies[i].checked)
+	{
+	selected=true;
+	}
+}
+if(selected==false)
+{
+msg+="enter your hobbies \n";
+}
+
+if(msg!="")
+{
+alert(msg)
+return false;
+}
+else
+{
+alert("successfully Registered \n")
+return True;
+}
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

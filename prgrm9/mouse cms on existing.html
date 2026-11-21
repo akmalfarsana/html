@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouse over event</title>
+</head>
+<body>
+<h2>Move the mouse over image</h2>
+<div onmouseover="newContent()" onmouseout="changeContent()">
+<img id="myImage" src="D:/farsana mca WP/prgrm9/Nature.png" width="400" height="300">
+<h3 id="myText">This is the original image</h3>
+</div>
+<script>
+function newContent()
+{
+document.getElementById("myImage").src="D:/farsana mca WP/prgrm9/nature2.png";
+document.getElementById("myText").innerHTML="This is the new image";
+}
+function changeContent()
+{
+document.getElementById("myImage").src="D:/farsana mca WP/prgrm9/Nature.png";
+document.getElementById("myText").innerHTML="This is the original image";
+}
+</script>
+</body>
+</html>
